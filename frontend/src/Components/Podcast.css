@@ -1,0 +1,53 @@
+.podcast-details {
+	display: flex;
+	flex-direction: row; /* Układ w rzędzie */
+	justify-content: space-between; /* Rozstawienie kolumn */
+	align-items: center; /* Wyrównanie elementów w pionie */
+	max-width: 1200px; /* Maksymalna szerokość całego kontenera */
+	margin: 20px auto; /* Wycentrowanie na stronie */
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.podcast-details h3 {
+	flex: 1; /* Tytuł zajmuje jedną część */
+	font-size: 20px;
+	margin-right: 20px;
+	text-align: left;
+}
+
+.podcast-details audio {
+	flex: 1; /* Audio zajmuje jedną część */
+	margin-right: 20px;
+}
+
+.podcast-details p {
+	flex: 2; /* Opis zajmuje dwie części, będzie szerszy */
+	font-size: 16px;
+	line-height: 1.5;
+
+	text-align: justify;
+}
+img {
+	width: 200px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+@media (max-width: 768px) {
+	.podcast-details {
+		flex-direction: column; /* Na małych ekranach elementy będą układane w pionie */
+	}
+
+	.podcast-details h3,
+	.podcast-details audio,
+	.podcast-details p {
+		margin-right: 0;
+		margin-bottom: 10px; /* Odstępy między elementami */
+		width: 100%;
+	}
+}
